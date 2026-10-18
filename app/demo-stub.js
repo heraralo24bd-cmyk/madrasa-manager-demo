@@ -76,6 +76,7 @@
     classes: CLASSES.map(n => ({ name: n })), class_catalog_configured: true,
     types: DB.feeTypes, class_rates: [],
     exams: DB.exams,
+    staff: DB.staff.map(x => ({ ...x, name: x.name_bn, active: 1, designation: x.role })),
   });
   const dashboard = () => ({
     income: 12500,
@@ -125,7 +126,7 @@
     if (cmd === 'open_data_folder' || cmd === 'support_open') return { ok: true };
     if (cmd === 'support_info') return {};
     if (cmd === 'backup_create') return mutated({ ok: true, path: 'demo-backup.zip' });
-    if (cmd === 'backup_list') return { rows: [] };
+    if (cmd === 'backup_list') return [];
 
     /* প্রিন্ট */
     if (cmd === 'print_printers') return [];
