@@ -1,0 +1,65 @@
+.r-dialog.staff-dialog{width:min(1120px,96vw);max-width:1120px;max-height:90vh;overflow:auto;border-radius:8px}
+.staff-layout{display:grid;grid-template-columns:180px minmax(0,1fr);gap:24px}
+.staff-photo{width:144px;height:172px;object-fit:cover;border:1px solid #dae2e8;border-radius:6px;background:#f2f5f7;display:block;margin-bottom:12px}
+.staff-aside{border-right:1px solid #e0e6ea;padding-right:18px}
+.staff-photo-frame{position:relative;width:144px;height:172px;background:#eef3f5;border:1px solid #d6e0e5;border-radius:6px;overflow:hidden}.staff-photo-frame>span{position:absolute;inset:0;display:grid;place-items:center;color:#7b929e}.staff-photo-frame>span svg{width:44px;height:44px}.staff-photo-frame>.staff-photo{position:absolute;inset:0;margin:0;border:0}
+.staff-aside label{display:block;margin:10px 0}
+.staff-aside input[type=file]{width:100%;font-size:12px}
+.staff-aside>.btn{display:flex;width:100%;justify-content:center;margin-top:10px;letter-spacing:0}
+.staff-tabs{display:flex;flex-wrap:wrap;gap:4px;border-bottom:1px solid #dae2e8;margin-bottom:18px}
+.staff-tabs button{padding:10px 14px;border:0;background:transparent;color:#667b89;border-bottom:3px solid transparent}
+.staff-tabs button.active{border-color:#139b78;color:#167459;font-weight:700}
+.staff-panel[hidden]{display:none}
+.staff-panel h4{margin:20px 0 12px;border-bottom:1px solid #e0e6ea;padding-bottom:8px;font-size:16px}
+.staff-panel .r-form-grid{gap:16px}
+.staff-panel textarea{width:100%;min-height:75px;border:1px solid #cbd7e2;border-radius:6px;padding:10px;font:inherit}
+.staff-check{display:flex!important;align-items:center;gap:8px;margin:15px 0}
+.staff-check input{width:18px!important;min-height:18px!important}
+.staff-net{background:#e9f7f1;padding:14px;margin-top:14px;color:#12634b;font-weight:700}
+.staff-doc{display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:1px solid #e0e6ea;padding:10px 0;overflow-wrap:anywhere}
+.staff-avatar{width:40px;height:48px;object-fit:cover;border-radius:4px;flex:none;background:#e5ebef}
+.staff-person{display:flex;gap:12px;align-items:center;min-width:170px}.staff-person small{display:block}
+.staff-sign{width:170px;height:70px;object-fit:contain;border:1px solid #dce3e8}
+.staff-qual{display:grid;grid-template-columns:1.2fr 1.5fr .65fr .7fr 36px;gap:8px;margin:10px 0;align-items:end}
+.staff-qual input{width:100%;min-width:0}
+.staff-profile{display:grid;grid-template-columns:160px minmax(0,1fr);gap:20px}.staff-profile dl{display:grid;grid-template-columns:160px minmax(0,1fr);gap:8px}.staff-profile dt{color:#6a7b87}.staff-profile dd{margin:0;overflow-wrap:anywhere}
+.discount-summary{padding:15px 0;border-bottom:1px solid #dce4e9}.discount-summary strong{color:#137b5c}.discount-summary small{display:block;color:#637783}
+.discount-admission{grid-column:1/-1;border-top:1px solid #dde5ec;margin-top:10px;padding-top:14px}
+.discount-admission label{display:flex;flex-direction:column;gap:6px;font-size:14px}.discount-admission input,.discount-admission select{width:100%;min-width:0;min-height:38px;border:1px solid #cbd7e2;border-radius:5px;background:white;color:#273e52;font:inherit;padding:6px 9px}
+.r-dialog .r-table-wrap table{width:100%;border-collapse:collapse;font-size:13px}.r-dialog .r-table-wrap td,.r-dialog .r-table-wrap th{padding:8px;text-align:left;border-bottom:1px solid #e1e7ec}
+.staff-photo[hidden],.staff-sign[hidden]{display:none!important}
+.discount-policy{padding:12px;background:#fff7e5;color:#805c19;border-left:3px solid #d6ab47;margin:12px 0;font-size:14px}
+.discount-review{background:#fff1ed;color:#99533b;padding:12px;margin:12px 0}
+.profile-result-state{display:inline-block;padding:3px 7px;border-radius:4px;font-size:13px;white-space:nowrap}.profile-result-state.published{background:#e6f5ef;color:#176747}.profile-result-state.draft{background:#fff4d8;color:#77551b}
+.profile-results{grid-column:1/-1;min-width:0;width:100%}.profile-results h3{font-size:17px;margin:22px 0 12px;letter-spacing:0}.profile-results .profile-result-refresh{width:42px;min-width:42px;padding:8px;justify-content:center}.profile-results [data-result-status]:empty{display:none}
+@media(max-width:850px){.staff-layout{grid-template-columns:140px minmax(0,1fr);gap:16px}.staff-photo,.staff-photo-frame{width:112px;height:138px}.staff-tabs button{padding:9px;font-size:14px}.staff-qual{grid-template-columns:1fr 1fr}.staff-profile{grid-template-columns:1fr}}
+@media(max-width:600px){.staff-layout{grid-template-columns:1fr}.staff-aside{border:0;padding:0;display:grid;grid-template-columns:100px 1fr;gap:12px}.staff-photo,.staff-photo-frame{width:90px;height:110px;grid-row:1/4}.staff-tabs{display:grid;grid-template-columns:1fr 1fr}.staff-profile dl{grid-template-columns:110px 1fr}.r-dialog.staff-dialog{width:96vw;padding:16px}}
+
+/* Student financial tabs occupy the complete content area. */
+.p-grid:has(> .profile-wide){grid-template-columns:minmax(0,1fr)}
+.p-grid>.profile-wide{grid-column:1/-1;width:100%;min-width:0}
+.profile-wide .r-table-wrap,.profile-wide table{width:100%}
+.profile-wide td,.profile-wide th{white-space:nowrap}
+.act-item>.act-ic{display:grid;place-items:center;align-self:center;flex-shrink:0}
+.act-item>.act-ic svg{display:block;margin:0;flex:none}
+.profile-deleted{margin:14px 0;padding:14px;background:#fff4df;border:1px solid #edd5a0;border-radius:10px}
+
+[data-act][hidden]{display:none!important}
+
+.p-actions{flex-wrap:wrap}
+.p-actions .profile-pay-primary{background:#13846a;color:#fff;border-color:#13846a}
+.profile-fee-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.profile-fee-note{font-size:13px!important;color:#667b89;margin:0 0 12px}
+.profile-fee-card .fcard-head{flex-wrap:wrap}
+.profile-fee-picker .r-dialog{width:min(720px,94vw)}
+.profile-fee-choices{display:grid;gap:8px;max-height:52vh;overflow:auto}
+.profile-fee-choice{display:flex;justify-content:space-between;align-items:center;gap:16px;text-align:left;padding:14px;border:1px solid #dce6ed;border-radius:10px;background:#fff;width:100%;font:inherit;cursor:pointer}
+.profile-fee-choice strong,.profile-fee-choice small{display:block}
+.profile-fee-choice small{color:#6b7f8d;font-size:13px!important}
+.profile-fee-choice:hover{border-color:#218568;background:#f2faf7}
+.profile-fee-status:empty{display:none}
+.sp-pay-preview .r-banner{display:flex;align-items:center;flex-wrap:wrap;gap:10px 18px;padding:16px;border:1px solid #cfe3df;border-radius:12px;background:#f1faf7}
+.sp-pay-preview .r-banner strong{color:#135e4e}
+.sp-pay-preview .r-banner button{margin-left:auto}
+.sp-pay-panel{margin-bottom:18px}
+.staff-card-actions{flex-wrap:wrap}

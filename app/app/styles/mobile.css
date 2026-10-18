@@ -1,0 +1,87 @@
+/* =========================================================
+   মোবাইল হোম + বটম নেভিগেশন (≤760px)
+   ========================================================= */
+.mnav { display: none; }
+
+@media (max-width: 760px) {
+  /* নিচের নেভিগেশন বার */
+  .mnav {
+    display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 60;
+    background: #fff; border-top: 1px solid #e2e8f0;
+    padding: 6px 4px calc(8px + env(safe-area-inset-bottom));
+    box-shadow: 0 -4px 18px rgba(15, 40, 80, .08);
+    align-items: flex-end; justify-content: space-around;
+  }
+  .mnav-it {
+    flex: 1; border: 0; background: none; display: flex; flex-direction: column;
+    align-items: center; gap: 3px; padding: 6px 2px; color: #5b6b82;
+    font-family: inherit; font-size: 11px; font-weight: 600; cursor: pointer;
+  }
+  .mnav-it svg { width: 24px; height: 24px; }
+  .mnav-it.active { color: #174979; }
+  .mnav-it.active svg { color: #174979; }
+  .mnav-fab {
+    width: 58px; height: 58px; border-radius: 50%; border: 4px solid #fff;
+    background: linear-gradient(135deg, #1d4a73, #0c2340); color: #fff;
+    display: flex; align-items: center; justify-content: center; cursor: pointer;
+    margin-top: -30px; box-shadow: 0 8px 20px rgba(12, 35, 64, .35);
+    font-family: inherit;
+  }
+  .mnav-fab svg { width: 26px; height: 26px; }
+  .mnav-fab.active { outline: 3px solid #c9a227; }
+
+  /* কনটেন্ট যেন নেভ বারের নিচে না ঢাকে */
+  .content { padding-bottom: calc(96px + env(safe-area-inset-bottom)) !important; }
+
+  /* মোবাইল হোম */
+  .mhome { margin: -14px -12px; padding: 0 0 8px; }
+  .mhome-bar {
+    display: flex; align-items: center; gap: 10px;
+    background: linear-gradient(135deg, #1d4a73 0%, #0c2340 100%);
+    color: #fff; padding: 12px 14px;
+    position: sticky; top: 0; z-index: 40;
+  }
+  .mhome-bar button { border: 0; background: none; color: #fff; cursor: pointer; padding: 6px; font-family: inherit; }
+  .mhome-bar button svg { width: 26px; height: 26px; display: block; }
+  .mhome-logo { width: 44px; height: 44px; border-radius: 10px; object-fit: cover; background: #fff; flex-shrink: 0; }
+  .mhome-title { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+  .mhome-title b { font-size: 17px; letter-spacing: .2px; }
+  .mhome-name { font-size: 11.5px; color: #fde68a; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .mhome-gear { margin-left: auto; }
+
+  .mhome-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 14px;
+    padding: 16px 14px;
+  }
+  .mcard {
+    border: 1.5px solid #dbe4f0; background: #fff; border-radius: 20px;
+    padding: 26px 10px 20px; display: flex; flex-direction: column;
+    align-items: center; gap: 12px; cursor: pointer; font-family: inherit;
+    box-shadow: 0 4px 14px rgba(20, 50, 84, .06);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .mcard:active { transform: scale(.96); }
+  .mcard-ic {
+    width: 62px; height: 62px; border-radius: 18px; background: #eef3fb;
+    display: flex; align-items: center; justify-content: center; color: #1d4a73;
+  }
+  .mcard-ic svg { width: 32px; height: 32px; }
+  .mcard-t { font-size: 16px; font-weight: 700; color: #243954; }
+
+  /* শীঘ্রই আসছে */
+  .soon { text-align: center; padding: 60px 24px; }
+  .soon-ic { font-size: 52px; margin-bottom: 12px; }
+  .soon h3 { color: #174979; margin: 0 0 8px; font-size: 20px; }
+  .soon p { color: #71809a; margin: 0 0 20px; }
+  .soon .btn {
+    border: 0; border-radius: 10px; padding: 12px 28px; font-size: 15px;
+    font-weight: 700; cursor: pointer; font-family: inherit;
+    background: linear-gradient(135deg, #1d4a73, #0c2340); color: #fff;
+  }
+
+  /* মোবাইল হোমে নিজস্ব বার আছে, তাই ডেস্কটপ টপবার লুকাও */
+  body.mhome-active .topbar { display: none; }
+  body.mhome-active .mobile-toggle { display: none; }
+  /* সাইডবার ড্রয়ার হিসেবে */
+  .sidebar { top: 0; height: 100dvh; }
+}

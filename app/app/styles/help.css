@@ -1,0 +1,31 @@
+.help-page { max-width: 960px; min-height: 540px; padding: 12px 4px 24px; color: #24384c; }
+.help-heading { display: flex; align-items: center; gap: 20px; padding: 0 0 22px; border-bottom: 1px solid #dbe4ed; }
+.help-heading img { flex: 0 0 72px; width: 72px; height: 72px; object-fit: contain; }
+.help-heading h2 { margin: 0 0 5px; font-size: 24px !important; letter-spacing: 0; }
+.help-heading p { margin: 0; color: #5f7186; font-size: 16px !important; }
+.help-row { display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 98px; padding: 18px 0; border-bottom: 1px solid #dbe4ed; }
+.help-detail { min-width: 0; }
+.help-detail h3 { margin: 0 0 8px; color: #596c82; font-size: 15px !important; font-weight: 600; }
+.help-detail p { margin: 0; font-size: 18px !important; line-height: 1.6; overflow-wrap: anywhere; letter-spacing: 0; }
+.help-row:nth-child(1) .help-detail p { color: #195eab; }
+.help-row:nth-child(2) .help-detail p { color: #138466; }
+.help-actions { display: flex; align-items: center; gap: 8px; flex: 0 0 auto; }
+.help-actions .btn { display: inline-flex; align-items: center; justify-content: center; gap: 7px; height: 40px; min-width: 88px; border-radius: 6px; font-size: 14px !important; }
+.help-actions .help-copy { width: 40px; min-width: 40px; padding: 8px; }
+.help-actions svg { width: 19px; height: 19px; fill: none; stroke: currentColor; stroke-width: 1.8; }
+.help-actions button:focus-visible { outline: 2px solid #247aa7; outline-offset: 3px; }
+.help-actions button:disabled { opacity: .55; cursor: wait; }
+.help-status { min-height: 38px; padding-top: 9px; color: #138466; font-size: 14px !important; overflow-wrap: anywhere; }
+.help-status.bad { color: #b32846; }
+.help-version { display: flex; justify-content: space-between; gap: 18px; padding: 14px 0; font-size: 15px; }
+.help-version span { color: #65768c; }
+.help-version span, .help-version b { font-size: 15px !important; }
+@media (max-width: 720px) {
+  .help-page { padding: 4px 0 18px; }
+  .help-heading { gap: 12px; }
+  .help-heading h2 { font-size: 21px !important; }
+  .help-row { align-items: flex-start; flex-wrap: wrap; gap: 12px; }
+  .help-detail { flex: 1 1 200px; }
+  .help-detail p { font-size: 17px !important; }
+  .help-version { flex-wrap: wrap; }
+}

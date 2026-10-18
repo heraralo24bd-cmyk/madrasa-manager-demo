@@ -1,0 +1,70 @@
+.q-mark-dialog {width:min(900px,96vw);max-width:900px;padding:18px 22px;background:#f5f9f7;}
+.q-mark-dialog > h3 {font-size:16px;margin-bottom:12px;}
+.q-mark-preview {overflow:auto;min-width:0;}
+.q-mark-page {width:210mm;min-height:297mm;margin:0 auto;padding:10mm;box-sizing:border-box;background:#fff;}
+.q-mark-page > .q-mark-sheet {min-height:277mm;box-sizing:border-box;padding:8mm;}
+.q-mark-sheet {border:1px solid #178968;background:#fff;color:#172b29;padding:8mm;box-sizing:border-box;letter-spacing:0;box-shadow:0 2px 10px #163b2d12;font-size:12px;}
+.q-mark-sheet {font-size:12px!important;}
+.q-mark-sheet table,.q-mark-sheet table * {font-size:11px!important;}
+.q-letterhead {margin-bottom:14px;}
+.q-exam-heading {display:table;max-width:100%;margin:0 auto 10px;padding:7px 16px;background:#147958;color:white;text-align:center;border-radius:3px;overflow-wrap:anywhere;}
+.q-exam-heading strong {display:block;font-size:14px!important;}
+.q-exam-heading span {font-size:11px!important;}
+.q-identity {display:grid;grid-template-columns:116px minmax(0,1fr);align-items:center;gap:16px;margin-bottom:10px;}
+.q-photo {width:110px;height:140px;border:1px solid #374943;display:grid;place-items:center;background:#f6f8f7;color:#667970;}
+.q-photo img {width:100%;height:100%;object-fit:contain;}
+.q-mark-sheet table {width:100%;border-collapse:collapse;table-layout:fixed;font-size:11px;}
+.q-mark-sheet th,.q-mark-sheet td {border:1px solid #46514c;padding:4px 6px;line-height:1.4;height:auto;color:#172b29;overflow-wrap:anywhere;}
+.q-student-info th {text-align:left;background:#f7f9f8;font-weight:600;color:#226c56;}
+.q-student-info td {text-align:left;}
+.q-subject-table {text-align:center;}
+.q-subject-table th,.q-subject-table td,.q-result-summary th,.q-result-summary td {padding-top:3px;padding-bottom:3px;}
+.q-subject-table thead th {text-align:center;background:#f4f7f5;font-weight:600;}
+.q-subject-table tbody td {text-align:center;}
+.q-subject-table tbody th {text-align:left;font-weight:400;}
+.q-col-serial {width:7%;}.q-col-subject {width:29%;}.q-col-mark {width:12%;}.q-col-grade {width:28%;}
+.q-subject-table tfoot th {text-align:right;}
+.q-subject-table tfoot td {text-align:center;font-weight:600;}
+.q-result-summary {margin-top:-1px;}
+.q-result-summary th {width:60%;text-align:right;font-weight:500;}
+.q-result-summary td {text-align:center;}
+.q-grade {font-weight:600;}.q-mark-sheet [data-grade="rasib"] {color:#a52639;}
+.q-signatures {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin:22px 0 10px;text-align:center;font-size:11px;break-inside:avoid;}
+.q-signatures span {display:block;border-top:1px solid #9aa69f;margin-bottom:7px;}
+.q-signatures,.q-signatures * {font-size:11px!important;}
+.q-footer {border-top:1px solid #9aa69f;display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:8px;font-size:10px;break-inside:avoid;}
+.q-footer p {margin:4px 0;white-space:pre-wrap;overflow-wrap:anywhere;}
+.q-footer,.q-footer * {font-size:10px!important;}
+.q-qr {width:60px;height:60px;object-fit:contain;image-rendering:pixelated;flex:none;}
+.q-mark-dialog .r-actions {justify-content:center;}
+.q-mark-dialog #rSave {background:#147958;color:#fff;}
+@media (max-width:600px) {
+  .q-mark-dialog {padding:12px;}.q-mark-sheet {padding:12px;font-size:11px;}
+  .q-identity {grid-template-columns:84px minmax(0,1fr);gap:10px;}.q-photo {width:80px;height:104px;}
+  .q-mark-sheet table {font-size:10px;}.q-mark-sheet th,.q-mark-sheet td {padding:4px 3px;}
+  .q-signatures {gap:8px;font-size:9px;}.q-qr {width:58px;height:58px;}
+  /* The A4 preview uses uniform page zoom; its typography stays physical. */
+  .q-mark-page .q-mark-sheet,.mm-print-paper .q-mark-sheet {padding:8mm;font-size:12px;}
+  .q-mark-page .q-identity,.mm-print-paper .q-identity {grid-template-columns:116px minmax(0,1fr);gap:16px;}
+  .q-mark-page .q-photo,.mm-print-paper .q-photo {width:110px;height:140px;}
+  .q-mark-page .q-mark-sheet table,.mm-print-paper .q-mark-sheet table {font-size:11px;}
+  .q-mark-page .q-mark-sheet th,.q-mark-page .q-mark-sheet td,.mm-print-paper .q-mark-sheet th,.mm-print-paper .q-mark-sheet td {padding:4px 6px;}
+  .q-mark-page .q-signatures,.mm-print-paper .q-signatures {gap:24px;font-size:11px;}.q-mark-page .q-qr,.mm-print-paper .q-qr {width:60px;height:60px;}
+}
+@media print {
+  body.r-printing > .q-print-only {padding:0!important;}
+  .q-print-only .q-mark-sheet {padding:8mm;box-shadow:none;font-size:12px;width:100%;}
+  .q-print-only .q-mark-sheet th,.q-print-only .q-mark-sheet td {padding:4px 6px!important;text-align:center!important;font-size:11px;}
+  .q-print-only .q-subject-table th,.q-print-only .q-subject-table td,.q-print-only .q-result-summary th,.q-print-only .q-result-summary td {padding-top:3px!important;padding-bottom:3px!important;}
+  .q-print-only .q-student-info th,.q-print-only .q-student-info td,.q-print-only .q-subject-table tbody th {text-align:left!important;}
+  .q-print-only .q-result-summary th,.q-print-only .q-subject-table tfoot th {text-align:right!important;}
+  .q-mark-sheet {print-color-adjust:exact;-webkit-print-color-adjust:exact;}
+  .q-subject-table thead {display:table-header-group;}
+  .q-subject-table tfoot {display:table-row-group;}
+  .q-mark-sheet tr,.q-letterhead,.q-exam-heading,.q-identity,.q-result-summary {break-inside:avoid;}
+  .q-print-only .q-identity {grid-template-columns:116px minmax(0,1fr);gap:16px;}
+  .q-print-only .q-photo {width:110px;height:140px;}
+  .q-print-only .q-signatures {font-size:11px;gap:24px;}
+  .q-print-only .q-mark-sheet + .q-mark-sheet {break-before:page;}
+  .q-print-only .q-mark-sheet {overflow:visible;}
+}

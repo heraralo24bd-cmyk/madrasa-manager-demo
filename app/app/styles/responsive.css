@@ -1,0 +1,43 @@
+@media(max-width:760px){
+  body>.app{min-width:0;min-height:100dvh}
+  .sidebar{width:min(270px,85vw);left:-280px;transition:left .18s ease}
+  .sidebar.show{left:0}
+  .content{min-width:0;width:100%;padding-left:12px!important;padding-right:12px!important;padding-bottom:calc(14px + env(safe-area-inset-bottom))!important}
+  .hero{gap:10px}
+  .form-actions{position:static;flex-wrap:wrap}
+  .form-actions .left{width:100%}
+  .act-btns{width:100%;flex-wrap:wrap}
+  .act-btns>.btn{flex:1 1 140px;justify-content:center}
+  .toolbar{align-items:stretch}
+  .search-box{flex-basis:100%;min-width:0}
+  .tool-select{flex:1 1 140px;min-width:0}
+  .table-wrap,.r-table-wrap{max-width:100%;overflow-x:auto}
+  .content button:not(.mini):not(.r-dialog-close),
+  .content input:not([type=checkbox]):not([type=radio]),
+  .content select{min-height:40px}
+}
+
+@media(max-width:480px){
+  .fcard-body{padding:12px}
+  .form-actions{gap:8px}
+  .act-btns>.btn{flex-basis:100%}
+}
+
+.mm-pay-overlay{backdrop-filter:none;animation-duration:.14s}
+.mm-pay-card{animation-duration:.18s}
+.mm-pay-x:hover{transform:none}
+.mm-pay-confetti i{animation:mm-pay-burst-gentle 1.5s var(--delay) ease-out both}
+@keyframes mm-pay-burst-gentle{
+  0%{transform:translate(0,0) rotate(0);opacity:1}
+  48%{transform:translate(calc(var(--x)*.65),-45vh) rotate(calc(var(--spin)*.5));opacity:1}
+  100%{transform:translate(var(--x),5vh) rotate(var(--spin));opacity:0}
+}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    animation-duration:.01ms!important;
+    animation-iteration-count:1!important;
+    scroll-behavior:auto!important;
+    transition-duration:.01ms!important
+  }
+}
