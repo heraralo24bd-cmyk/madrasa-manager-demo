@@ -116,7 +116,7 @@ MM.pageSettings = (() => {
         '<div class="settings-print-preview"><div id="settingsPrintHeaderPreview" aria-label="প্রিন্টের শিরোনামের নমুনা"></div></div></section></section>' +
         '<section id="panel-general" role="tabpanel" aria-labelledby="tab-general" data-panel="general" hidden><div class="settings-grid">' +
         field('academic_year','শিক্ষাবর্ষ',s,20) + field('administrator_name','পরিচালকের নাম',s,80) +
-        '<label>প্রাথমিক ভাষা<select name="language">' + [['','সর্বশেষ ব্যবহৃত ভাষা'],['bn','বাংলা'],['en','English']].map(([v,l]) =>
+        '<label>প্রাথমিক ভাষা<select name="language" id="settingsLang">' + [['','সর্বশেষ ব্যবহৃত ভাষা'],['bn','বাংলা'],['en','English']].map(([v,l]) =>
           '<option value="' + v + '"' + (v === s.language ? ' selected' : '') + '>' + l + '</option>').join('') + '</select></label>' +
         area('receipt_footer','প্রিন্টের নিচের লেখা',s,300) + '</div></section>' +
         '<div id="settingsSaveBar" class="settings-save"><button type="submit" class="btn btn-primary" id="settingsSave">' + icon('save') + 'সংরক্ষণ করুন</button>' +
@@ -225,6 +225,8 @@ MM.pageSettings = (() => {
         finally { if (run === generation) setBusy(false); }
       };
       form.noValidate = true;
+      const langSel = root.querySelector('#settingsLang');
+      if (langSel) langSel.addEventListener('change', () => { if (langSel.value) window.setLanguage(langSel.value); });
       root.querySelector('#settingsCancel').onclick = async () => {
         if (dirty && !await MM.util.confirm(t('অসংরক্ষিত পরিবর্তন বাতিল করবেন?'))) return;
         dirty = false; render(root, {tab:root.querySelector('[aria-selected="true"]').dataset.tab});
